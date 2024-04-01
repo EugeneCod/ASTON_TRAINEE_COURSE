@@ -108,7 +108,7 @@
 //* Solution
 //
 // function getUniqArray(numbers) {
-//   let uniqueNumbers = new Set();
+//   const uniqueNumbers = new Set();
 
 //   numbers.forEach((value) => {
 //     if (!Number.isFinite(value)) throw new Error('В getUniqArray был передан невалидный параметр. Аргумент arr должен быть массивом чисел');
