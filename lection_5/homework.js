@@ -41,7 +41,17 @@
 // Создайте объекты animal и bird с использованием соответствующих конструкторов и вызовите их методы speak и fly.
 // Решите задачу, используя прототипное наследование, чтобы Bird наследовал от Animal.
 
+// Должно быть такое поведение:
+// const animal = new Animal("Дженни");
+// const bird = new Bird("Воробей");
+//
+// animal.speak(); // "Some generic sound"
+// bird.speak();   // "Some generic sound"
+// bird.fly();     // "Flying high!"
+
 //* Solution
+
+// 1. С использованием функций-конструкторов:
 
 // function Animal(name) {
 //   this.name = name;
@@ -60,10 +70,24 @@
 //   console.log('Flying high!');
 // }
 
-// Должно быть такое поведение:
-// const animal = new Animal("Дженни");
-// const bird = new Bird("Воробей");
-//
-// animal.speak(); // "Some generic sound"
-// bird.speak();   // "Some generic sound"
-// bird.fly();     // "Flying high!"
+// 2. С использованием синтаксиса классов:
+
+// class Animal {
+//   constructor(name) {
+//     this.name = name;
+//   }
+
+//   speak() {
+//     console.log('Some generic sound');
+//   }
+// }
+
+// class Bird extends Animal {
+//   constructor(name) {
+//     super(name)
+//   }
+
+//   fly() {
+//     console.log('Flying high!');
+//   }
+// }
