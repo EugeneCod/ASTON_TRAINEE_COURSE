@@ -213,3 +213,33 @@
 // asyncFn()
 //
 // console.log(3)
+
+function Animal(name) {
+    this.name = name
+}
+
+Animal.prototype.speak = function() {
+    console.log("Some generic sound")
+}
+
+function Bird(name) {
+    Animal.call(this, name)
+}
+
+// Object.setPrototypeOf(Animal.prototype, Bird.prototype)
+
+
+Bird.prototype.fly = function() {
+    console.log("Flying high!")
+}
+
+
+const animal = new Animal("Дженни");
+const bird = new Bird("Воробей");
+
+console.log('s', animal)
+console.log('s', bird)
+
+animal.speak(); // "Some generic sound"
+bird.speak();   // "Some generic sound"
+bird.fly();     // "Flying high!"
